@@ -13,6 +13,13 @@ require_once __DIR__ . '/vendor/autoload.php';
 					echo "Please provide appropriate input. More than two values are not allowed.";
 				}
 				break;
+			case "add":
+				if (isset($argvArr)) {
+					Calculator\CalculatorAssignment::sumTwo($argvArr);
+				} else {
+					echo "Please provide appropriate input.";
+				}
+				break;
 			default:
 				echo "You are not using the appropriate operation!";
 		}
