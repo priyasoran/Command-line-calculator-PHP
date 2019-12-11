@@ -9,19 +9,24 @@ namespace Calculator;
       $sum = array_sum($params);
 	  echo  $sum;
     }
+	
 	/*
-	  Use : Check If Array contaning negative Number
+	  Use : Check If Array contaning negative Number and return value as well
 	  */
-	static function checkNegativeNumber($params){
+	static function checkNegativeValue($params){
+		$flag = 0;
+		$negativeArray = array();
 		foreach ($params as $value)
 		{
 			if ($value < 0)
 			{
-				 return 0;
+				//$flag = 1;
+				array_push($negativeArray,$value);
 			}
 		}
-		return 1;
+		return implode(",",$negativeArray);;
     }
+	
 	
   }
   ?>
