@@ -5,7 +5,7 @@ namespace Calculator;
 	  /*
 	  Use : To add all the values in Array
 	  */
-    static function sumTwo($params){
+    static function sumAll($params){
       $sum = array_sum($params);
 	  echo  $sum;
     }
@@ -17,22 +17,21 @@ namespace Calculator;
 		{
 			if ($value < 0)
 			{
-				 return false;
+				 return 0;
 			}
 		}
-		return true;
+		return 1;
     }
 	/*
 	  Use : Check If Array contaning negative Number and return value as well
 	  */
 	static function checkNegativeValue($params){
-		$flag = 0;
 		$negativeArray = array();
 		foreach ($params as $value)
 		{
 			if ($value < 0)
 			{
-				//$flag = 1;
+				
 				array_push($negativeArray,$value);
 			}
 		}
@@ -52,6 +51,13 @@ namespace Calculator;
 			}
 		}
 		return $params;
+    }
+	/*
+	  Use : Multiple all values in string
+	  */
+	static function multiply($params){
+      $product = array_product($params);
+	  echo  $product;
     }
 	
 	
